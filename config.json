@@ -1,0 +1,13 @@
+{
+    "credentialsPath": "/service-account-key.json",
+    "API_KEY": "B11393B5663828C3219016BF5BF73CA4",
+    "baseUrl": "http://enterprise.majestic.com/api/json",
+    "bigQuery": {
+        "DatasetID": "Majestic",
+        "TableID": "Majestic"
+    },
+    "csvFilePath": "maj.csv",
+    "projects" : ["monkeysportsteamsales.com"],
+    "counts": 10,
+    "debug": true
+}
