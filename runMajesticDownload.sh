@@ -37,7 +37,7 @@ if [ $ERROR_COUNT -ne 0 ]; then
     echo "One or more errors occurred during $DL_DIR_NAME processing - check the log for details"
 fi
 
-gsutil cp ./reports/$LOG_FILE_NAME gs://statbid/$DL_DIR_NAME/$LOG_FILE_NAME
+gsutil cp ./reports/$LOG_FILE_NAME "$DL_GS_BUCKET_NAME"/reports/$LOG_FILE_NAME
 
 rm -r "$DL_CSV_DIR_NAME"
 rm -r ./reports/
