@@ -8,6 +8,6 @@
     },
     "csvFilePath": "maj.csv",
     "projects" : ["monkeysportsteamsales.com"],
-    "counts": 10,
+    "counts": 10000,
     "debug": true
 }
