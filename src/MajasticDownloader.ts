@@ -17,7 +17,7 @@ export class MajesticDownloader {
     private config = new DownloaderConfig();
 
     async execute(config: DownloaderConfig) {
-        process.env.GOOGLE_APPLICATION_CREDENTIALS = config.credentialsPath;
+        // process.env.GOOGLE_APPLICATION_CREDENTIALS = config.credentialsPath;
         this.config = config;
         const { projects } = config;
 
