@@ -22,13 +22,7 @@ find ./reports -type f -exec gsutil cp "$DL_CSV_DIR_NAME"/*.csv "$DL_GS_BUCKET_N
 ERROR_COUNT=$(cat ./reports/"$LOG_FILE_NAME" | grep -ic error)
 
 if [ $ERROR_COUNT -eq 0 ]; then
-    if ! bq show --dataset $DL_BQ_DATASET_NAME &>/dev/null; then
-        bq mk --dataset $DL_BQ_DATASET_NAME >> ./reports/"$LOG_FILE_NAME" 2>&1
-    else
-        echo "Dataset $DL_BQ_DATASET_NAME already exists." >> ./reports/"$LOG_FILE_NAME"
-    fi
-
-    bq load --source_format=CSV --autodetect \
+        bq load --source_format=CSV --autodetect \
         "$DL_BQ_DATASET_NAME"."$DL_BQ_TABLE_NAME" \
         "$DL_GS_BUCKET_NAME"/*.csv >> ./reports/"$LOG_FILE_NAME" 2>&1
 fi
