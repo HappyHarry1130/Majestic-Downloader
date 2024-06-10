@@ -1,4 +1,4 @@
-# AWR Cloud Data to BigQuery Automation
+# Majestic Cloud Data to BigQuery Automation
 
 This project automates the process of fetching data from the Majestic Cloud API, converting the data into a suitable format, and uploading it to Google BigQuery. The process will be automated to run daily via a crontab job.
 
