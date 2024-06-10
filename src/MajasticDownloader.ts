@@ -7,7 +7,7 @@ import axios from 'axios';
 import { stringify } from 'csv-stringify';
 import { DownloaderConfig } from "./dto/DownloaderConfig";
 import { StatbidMessageLogger } from "./helpers/StatbidMessageLogger";
-
+const moment = require('moment');
 interface JsonData {
     [key: string]: any;
 }
