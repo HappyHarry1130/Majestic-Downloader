@@ -15,7 +15,7 @@ Below is the project file structure detailing the main components:
 Configuration for this project is managed via the `config.json` file, which includes:
 
 - **`credentialsPath`**: Path to the Google Cloud service account credentials.
-- **`apikey`**: API key for accessing the AWR Cloud API.
+- **`apikey`**: API key for accessing the Majestic Cloud API.
 - **`bigQuery`**:
   - **`DatasetID`**: Specifies the BigQuery dataset to use.
   - **`TableID`**: Specifies the BigQuery table to store the data.
