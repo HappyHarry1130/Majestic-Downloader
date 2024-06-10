@@ -5,7 +5,7 @@ DL_DIR_NAME=majestic_downloader
 DL_BQ_DATASET_NAME=123inkjets
 DL_BQ_TABLE_NAME=Majestic
 DL_CSV_DIR_NAME=output
-DL_GS_BUCKET_NAME=gs://statbid-argos-datacollection-prod1/knifecenter/majestic
+DL_GS_BUCKET_NAME=gs://statbid-argos-datacollection-prod1/123inkjets/majestic
 
 gcloud auth activate-service-account --key-file=../feed-storage-94d94e70e271.json
 
