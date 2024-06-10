@@ -97,6 +97,9 @@ export class MajesticDownloader {
     }
 
     private async convertToCsv(jsonData: JsonData[], project: string): Promise<void> {
+        const date = new Date();
+        const formatedDate = this.formatDate(date);
+
         if (!Array.isArray(jsonData)) {
             console.error('Invalid JSON data');
             return;
@@ -127,7 +130,7 @@ export class MajesticDownloader {
                 });
             });
 
-            fs.writeFile(`${directoryPath}/${project}.csv`, csv, function (err) {
+            fs.writeFile(`${directoryPath}/${project}-${formatedDate}.csv`, csv, function (err) {
                 if (err) {
                     console.error('Error writing CSV file:', err);
                 } else {
@@ -138,6 +141,8 @@ export class MajesticDownloader {
             console.error('Error converting to CSV:', error);
         }
     }
-
+    private formatDate(date: Date): string {
+        return moment(date).format('YYYY-MM-DD');
+    }
 
 }
