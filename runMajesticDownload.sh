@@ -2,7 +2,7 @@
 
 DL_MAIN_FILE=./dist/main.js
 DL_DIR_NAME=majestic_downloader
-DL_BQ_DATASET_NAME=Majestic
+DL_BQ_DATASET_NAME=123inkjets
 DL_BQ_TABLE_NAME=Majestic
 DL_CSV_DIR_NAME=output
 DL_GS_BUCKET_NAME=gs://statbid-argos-datacollection-prod1/knifecenter/majestic
